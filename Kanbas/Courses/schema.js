@@ -1,14 +1,16 @@
 import mongoose from "mongoose";
+
 const courseSchema = new mongoose.Schema({
-    name: { type: String, required: true, unique: true },
-    number: { type: String, required: true, unique: true},
-    startDate: Date,
-    endDate: Date,
-    department: String,
-    credits: Number,
-    description: String,
-    author: String,
+        name: String,
+        number: String,
+        startDate: Date,
+        endDate: Date,
+        department: String,
+        credits: Number,
+        cover: String,
+        description: String,
     },
-    { collection: "courses"}
+    {collection: "courses"}
 );
+
 export default courseSchema;
