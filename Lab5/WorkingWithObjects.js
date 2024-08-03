@@ -21,9 +21,13 @@ export default function WorkingWithObjects(app) {
         assignment.title = newTitle;
         res.json(assignment);
     });
-    app.get("/lab5/assignment/score_completed/:score/:completed", (req, res) => {
-        const {score,completed} = req.params;
+    app.get("/lab5/assignment/score:score", (req, res) => {
+        const {score} = req.params;
         assignment.score = score;
+        res.json(assignment);
+    });
+        app.get("/lab5/assignment/completed//:completed", (req, res) => {
+        const {completed} = req.params;
         assignment.completed = completed;
         res.json(assignment);
     });
